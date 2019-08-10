@@ -10,6 +10,9 @@ const vehicle = new Vehicle('orange');
 console.log(vehicle.color);
 
 class MotoCycle extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
   private drive(): void {
     console.log('vroom');
   }
@@ -20,5 +23,5 @@ class MotoCycle extends Vehicle {
   }
 }
 
-const motoCycle = new MotoCycle();
+const motoCycle = new MotoCycle(4, 'red');
 motoCycle.startDrivingProcess();
